@@ -7,8 +7,8 @@ import chardet
 BASE_URL = "http://srv-interflex/WebClient/iflx/help/de/"
 
 # NTLM Authentication Credentials (Update these)
-USERNAME = "khadijah-ali.shah"
-PASSWORD = "Keyboard1405!"
+USERNAME = "..." #enter your username
+PASSWORD = "..." #enter your directory
 
 
 # Start a session with NTLM authentication
