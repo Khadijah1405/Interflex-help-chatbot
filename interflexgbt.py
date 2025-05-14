@@ -18,7 +18,7 @@ options.add_argument("--allow-file-access-from-files")  # ✅ Allow local file a
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 # ✅ Step 1: Open TOC (Table of Contents) - Now using `inhalt.html`
-toc_url = "file:///C:/Users/Khadijah-ali.shah/OneDrive%20-%20eVergabe.de%20GmbH/Desktop/New%20folder/Interflex%206020%20WebClient%20Version%201.91%20Interflex%20Datensysteme%20GmbH%20&%20Co.%20KG_files/inhalt.html"
+toc_url = "file:///C:/Users/.../inhalt.html" #enter your user url
 driver.get(toc_url)
 
 # ✅ Wait for page to load
@@ -29,7 +29,7 @@ soup = BeautifulSoup(driver.page_source, "html.parser")
 links = soup.find_all("a")
 
 # ✅ Define base local folder where extracted HTML files exist
-base_folder = "C:/Users/Khadijah-ali.shah/OneDrive - eVergabe.de GmbH/Desktop/New folder/Interflex 6020 WebClient Version 1.91 Interflex Datensysteme GmbH & Co. KG_files/"
+base_folder = "C:/Users/..../Interflex 6020 WebClient Version 1.91 Interflex Datensysteme GmbH & Co. KG_files/" #enter your user url
 
 all_text = []
 
@@ -85,7 +85,7 @@ else:
     print("❌ No topics found in `inhalt.html`.")
 
 # ✅ Define Output Directory and File
-output_folder = "C:/Users/Khadijah-ali.shah/OneDrive - eVergabe.de GmbH/Desktop/New folder/Interflex 6020 WebClient Version 1.91 Interflex Datensysteme GmbH & Co. KG_files/"
+output_folder = "C:/Users/...../Interflex 6020 WebClient Version 1.91 Interflex Datensysteme GmbH & Co. KG_files/" #enter your user url
 output_file = os.path.join(output_folder, "interflex_data.json")
 
 # ✅ Ensure the directory exists
