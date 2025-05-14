@@ -4,7 +4,7 @@ from requests_ntlm import HttpNtlmAuth
 import chardet
 
 # Base URL for Interflex help documentation
-BASE_URL = "http://srv-interflex/WebClient/iflx/help/de/"
+BASE_URL = "http://srv-interflex/WebClient/iflx/help/de/"  # Change to 'en', 'fr', etc. if needed
 
 # NTLM Authentication Credentials (Update these)
 USERNAME = "..." #enter your username
