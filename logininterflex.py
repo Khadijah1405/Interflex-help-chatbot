@@ -7,8 +7,8 @@ from requests_ntlm import HttpNtlmAuth
 BASE_URL = "http://srv-interflex/WebClient/iflx/help/en/"
 
 # NTLM Authentication Credentials (Update these)
-USERNAME = "khadijah-ali.shah"
-PASSWORD = "Keyboard1405!"
+USERNAME = "..." #enter your username
+PASSWORD = "..." #enter your password
 
 # Start a session with NTLM authentication
 session = requests.Session()
