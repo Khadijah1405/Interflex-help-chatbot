@@ -40,7 +40,6 @@ This project extracts help documentation from the **Interflex 6020 WebClient (v1
 - Microsoft Copilot Studio
 
 ---
-
 ## 🧑‍💻 How to Use
 
 ### ▶️ Option 1: Local File Scraper (Selenium)
@@ -49,3 +48,103 @@ This project extracts help documentation from the **Interflex 6020 WebClient (v1
 
 ```bash
 pip install selenium beautifulsoup4 webdriver-manager
+```
+
+**Edit and run `extract_interflex_docs.py`:**
+
+```python
+toc_url = "file:///C:/Users/YourName/.../inhalt.html"
+base_folder = "C:/Users/YourName/.../WebClient_files/"
+output_file = "C:/Users/YourName/.../interflex_data.json"
+```
+
+**This script will:**
+- Open the TOC
+- Navigate and extract rendered content
+- Save results to JSON
+
+---
+
+### ▶️ Option 2: Remote NTLM Web Scraper
+
+**Setup:**
+
+```bash
+pip install requests requests-ntlm beautifulsoup4 chardet
+```
+
+**Edit and run `extract_interflex_from_server.py`:**
+
+```python
+BASE_URL = "http://srv-interflex/WebClient/iflx/help/de/"
+USERNAME = "your_username"
+PASSWORD = "your_password"
+```
+
+**This script:**
+- Authenticates to NTLM intranet site
+- Parses frameset and TOC
+- Extracts and cleans help text
+- Outputs `interflex_help_fixed.txt`
+
+---
+
+## 📦 Output Formats
+
+### JSON (for chatbot ingestion)
+
+```json
+{
+  "title": "Interflex Documentation",
+  "topics": [
+    {
+      "topic_url": "file:///...",
+      "headings": ["..."],
+      "content": ["..."]
+    }
+  ]
+}
+```
+
+### TXT (for human-readable reference)
+
+```txt
+### topic1.htm ###
+Interflex login process...
+
+### topic2.htm ###
+How to manage user roles...
+```
+
+---
+
+## 📁 Repository Structure
+
+```bash
+├── extract_interflex_docs.py             # Local scraping via Selenium
+├── extract_interflex_from_server.py      # NTLM web scraper
+├── interflex_data.json                   # Structured chatbot data
+├── interflex_help_fixed.txt              # Cleaned plain text output
+└── README.md                             # Project documentation
+```
+
+---
+
+## 💡 Use Case
+
+This project was used to create a **Microsoft Copilot Studio chatbot** that answers questions about Interflex software based on internal documentation that isn't accessible via public URLs.
+
+---
+
+## 📜 License
+
+MIT
+
+---
+
+## 🙋‍♀️ Author
+
+Created by [@Khadijah1405](https://github.com/Khadijah1405)  
+Based on the Interflex 6020 WebClient (v1.91)  
+Built using open source tools and automation frameworks
+
