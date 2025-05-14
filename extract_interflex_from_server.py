@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from requests_ntlm import HttpNtlmAuth
 
 # Base URL for Interflex help documentation
-BASE_URL = "http://srv-interflex/WebClient/iflx/help/en/"
+BASE_URL = "http://srv-interflex/WebClient/iflx/help/en/"  #change to de/fr considering the language you need
 
 # NTLM Authentication Credentials (Update these)
 USERNAME = "..." #enter your username
