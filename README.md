@@ -116,18 +116,7 @@ Interflex login process...
 How to manage user roles...
 ```
 
----
-
-## 📁 Repository Structure
-
-```bash
-├── extract_interflex_docs.py             # Local scraping via Selenium
-├── extract_interflex_from_server.py      # NTLM web scraper
-├── interflex_data.json                   # Structured chatbot data
-├── interflex_help_fixed.txt              # Cleaned plain text output
-└── README.md                             # Project documentation
-```
-
+--
 ---
 
 ## 💡 Use Case
